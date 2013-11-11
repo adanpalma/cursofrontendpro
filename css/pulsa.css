@@ -176,8 +176,9 @@ nav .menu li a:hover {
   border-radius: 3px;
   color: #fff;
   margin: 0 1em 0 0;
-  padding: 2px 5px;
+  padding: 2px 2px;
   text-decoration: none;
+  position: relative;
 }
 .posts .post .acciones .datos .estrellita {
   text-decoration: none;
