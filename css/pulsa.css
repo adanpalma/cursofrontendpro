@@ -32,6 +32,14 @@ footer h3 .mejor:before,
 footer h3 .mejor:after {
   content: " - ";
 }
+form {
+  padding: 0.8em;
+  display: none;
+}
+form label {
+  display: inline-block;
+  width: 60px;
+}
 header {
   background: #444;
   box-shadow: 0 5px 0 rgba(0,0,0,0.2);
@@ -42,7 +50,7 @@ header {
   z-index: 2;
 }
 header .logo {
-  border-right: 1px solid azul;
+  border-right: 1px solid #44c;
   float: left;
   width: 60px;
 }
@@ -53,7 +61,7 @@ header .titular {
   margin: 0 80px 0 70px;
 }
 header .titular .filtro {
-  color: azul;
+  color: #44c;
   font-size: 14px;
   font-style: italic;
   font-weight: bold;
@@ -116,7 +124,7 @@ header .usuario .flechita:after {
   text-shadow: 1px 1px 0px #000;
 }
 nav {
-  background: azul;
+  background: #44c;
   border-left: 15px solid #fff;
   position: relative;
 }
@@ -164,7 +172,7 @@ nav .menu li a:hover {
   margin-bottom: 0.5em;
 }
 .posts .post .acciones {
-  border-top: 3px solid azul;
+  border-top: 3px solid #44c;
   padding: 0.5em;
   overflow: hidden;
 }
@@ -226,7 +234,7 @@ nav .menu li a:hover {
   margin: 0 1em 0 0;
 }
 .posts .post .descripcion .detalles .tag {
-  background: azul;
+  background: #44c;
   border-radius: 0.5em;
   color: #fff;
   padding: 0.2em 0.5em;

@@ -7,6 +7,7 @@
   <meta name="viewport"    content="width=device-width, initial-scale=1 maximum-scale = 1"    / >
     <link rel="stylesheet"  href="css/normalize.css" />
   <link rel="stylesheet"  href="css/pulsa.css" />
+  <script src="jquery-2.0.3.min.js"></script>
 </head>
 <body>
 <header>
@@ -51,6 +52,25 @@
       <li><a href="#">CSS3</a></li>
     </ul>
   </nav>
+  <form action="">
+    <p>
+      <label for="titulo">Titulo</label>
+      <Input  placeholder ="Ingrese el Titulo" id="titulo" type="text" name="titulo"></Input>
+    </p>
+    <p>
+      <label for="autor">Autor</label>
+      <Input placeholder ="Ingrese el Autor" id="autor" type = "text" name="autor"></Input>
+    </p>
+    <p>
+      <label for="tag">Tag</label>
+      <Input placeholder ="Ingrese el Tag"  id="tag" type = "text" name = "tag"></Input>
+    </p>
+    <input type="submit" value="Publicar" ></input>
+
+  </form>
+
+
+
    <section class="posts">
   <article class="post">
    <div class="descripcion">
@@ -256,6 +276,88 @@
           mejorando.la 2013
      </span>
   </footer>
+
+  <script type="text/javascript">
+
+  $(function(){
+    $('.publicar')
+      .on('click',mostrarformulario);
+
+    function mostrarformulario(){
+      $('form').slideToggle();
+    }
+
+    $('form').on('submit',procesarformulario);
+
+    function procesarformulario(ev){
+        ev.preventDefault() ;
+        var titulo = $('input[name=titulo]').val();
+        var autor = $('input[name=autor]').val();
+        var tag = $('input[name=tag]').val();
+
+        var template = '<article class="post"> \
+             <div class="descripcion"> \
+              <figure class="imagen"> \
+               <img src="imagenes/foto.jpg" /> \
+              </figure> \
+              <div class="detalles"> \
+               <h2 class="titulo">   \
+               '+ titulo + ' \
+               </h2> \
+               <p class="autor"> \
+                por <a href="#">' + autor + '</a> \
+               </p> \
+               <a class="tag">' + tag + '</a> \
+               <p class="fecha">hace \
+                <strong>0</strong> min \
+               </p> \
+              </div> \
+             </div> \
+             <div class="acciones"> \
+              <div class="votos"> \
+               <a class="up" href="#"></a> \
+               <span class="total">0</span> \
+               <a class="down" href="#"></a> \
+              </div> \
+              <div class="datos"> \
+               <a class="comentarios" href="#"> \
+                0 \
+               </a> \
+               <a class="estrellita" href="#"> \
+                </a> \
+              </div> \
+             </div> \
+            </article>';
+
+            $('.posts').prepend($(template).fadeIn(1000,function(){
+              $(this).css('display','inline-block');
+            }));
+            $('input[type=text]').val('');
+            $('form').slideUp();
+
+    };
+  });
+
+
+
+  /*   function darbienvenida(){
+      alert("Hola has dado click en este boton");
+    }
+
+    function haceralgoimportante(){
+      console.log("Estoy haciendo algo importante");
+     }
+
+     $(function(){
+      $('.publicar')
+        .on('click',darbienvenida);
+
+
+     $(window)
+        .on('load',haceralgoimportante);
+     $('.publicar').off('click',darbienvenida);
+      });*/
+  </script>
 
 </body>
 </html>
