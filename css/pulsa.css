@@ -13,6 +13,7 @@ body {
   color: #444;
   font-family: Arial;
   font-size: 16px;
+  transition: font-size 1s;
 }
 footer {
   background: #dd4f24;
@@ -83,8 +84,11 @@ header .titular .publicar:before {
   margin: 0 3px 0 0;
   text-shadow: none;
 }
+header .titular .sizer {
+  text-decoration: none;
+}
 header .titular .titulo {
-  font-size: 18px;
+  font-size: 1.1em;
   font-weight: normal;
   margin: 0;
   padding: 0;
@@ -242,7 +246,7 @@ nav .menu li a:hover {
 }
 .posts .post .descripcion .detalles .titulo {
   color: #444;
-  font-size: 18px;
+  font-size: 1.1em;
   font-style: italic;
   margin: 0;
   padding: 0.5em 0.5em 0 0;
